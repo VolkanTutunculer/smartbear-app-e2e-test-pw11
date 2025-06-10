@@ -1,19 +1,11 @@
 {
-  "name": "smartbear-app-e2e-test-pw11",
+  "name": "smartbear-app-e2e-tests-pw11",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/VolkanTutunculer/smartbear-app-e2e-test-pw11.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/VolkanTutunculer/smartbear-app-e2e-test-pw11/issues"
-  },
-  "homepage": "https://github.com/VolkanTutunculer/smartbear-app-e2e-test-pw11#readme",
   "description": "",
   "devDependencies": {
     "@playwright/test": "^1.52.0",

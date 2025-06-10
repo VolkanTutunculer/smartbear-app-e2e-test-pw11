@@ -1,4 +1,4 @@
-name: SmartBear App Tests
+name: SmartBear Tests
 on:
   push:
     branches: [ main, master ]
