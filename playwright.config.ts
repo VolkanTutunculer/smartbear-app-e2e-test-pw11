@@ -30,7 +30,7 @@ export default defineConfig({
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    headless: false,
+     headless:  process.env.CI ? true : false,
     /* Base URL to use in actions like `await page.goto('/')`. */
     //baseURL: process.env.baseURL,
 
@@ -54,6 +54,16 @@ export default defineConfig({
     {
       name: 'SmartBear Setup Tests',
       testDir: './tests/setup',
+      use: { 
+        ...devices['Desktop Chrome'],
+        baseURL: process.env.loginURL
+       },
+    },
+
+    
+    {
+      name: 'SmartBear Login Tests',
+      testDir: './tests/login-tests',
       use: { 
         ...devices['Desktop Chrome'],
         baseURL: process.env.loginURL
