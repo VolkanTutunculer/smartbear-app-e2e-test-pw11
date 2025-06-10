@@ -36,12 +36,12 @@ export default defineConfig({
 
   /* Configure projects for major browsers */
   projects: [
-    {
-      name: "SmartBear Tests - Chrome",
-      testDir: "./tests/e2e-tests",
-      dependencies: ["SmartBear Tests - Chrome"],
-      use: { ...devices["Desktop Chrome"] },
-    },
+    // {
+    //   name: "SmartBear Tests - Chrome",
+    //   testDir: "./tests/e2e-tests",
+    //   dependencies: ["SmartBear Tests - Chrome"],
+    //   use: { ...devices["Desktop Chrome"] },
+    // },
 
     {
       name: "SmartBear Tests - Chrome",
