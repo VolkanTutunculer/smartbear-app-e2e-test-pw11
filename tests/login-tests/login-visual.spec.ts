@@ -1,16 +1,24 @@
-import { test, expect } from './../../fixtures/PageObject';
-import { ScreenshoyUtils } from '../../utils/ScreenshoyUtils';
+import { test, expect } from "./../../fixtures/PageObject";
+import { ScreenshotUtils } from "../../utils/ScreenshotUtils";
 
-test.describe('SmartBear App Login Page visual verifitication', () => {
-    // let loginPage: LoginPage;
-    // test.beforeEach(async ({ page }) => {
-    //     await page.goto('');
-    //     loginPage = new LoginPage(page);
-    // });
+test.describe("SmartBear App Login Page visual verification @Login @Smoke", () => {
+  test("Login Page Visual Regression", async ({ loginPage }) => {
+    await expect(loginPage.loginForm).toBeVisible();
+    await ScreenshotUtils.takeScreenshot(loginPage.page);
+  });
 
-    test('Login Page Visual Regression', async ({ loginPage }) => {
-        await expect(loginPage.loginForm).toBeVisible();
-        await ScreenshoyUtils.takeScreenshot(loginPage.page);
-    });
-
-}) 
+  test("SmartBear App Login Page snapshot verification", async ({
+    loginPage,
+  }) => {
+    await expect(loginPage.loginForm).toMatchAriaSnapshot(`
+      - paragraph
+      - text: "Username:"
+      - textbox "Username:"
+      - text: "Password:"
+      - textbox "Password:"
+      - button "Login"
+      - paragraph: "In order to log in Orders sample use the following information:"
+      - paragraph: Username - Tester Password - test
+      `);
+  });
+});

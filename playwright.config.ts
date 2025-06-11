@@ -21,7 +21,7 @@ export default defineConfig({
   /* Retry on CI only */
   retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 1 : undefined,
+  workers: process.env.CI ? undefined : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
     ['html', { open: 'never'}],
@@ -30,7 +30,7 @@ export default defineConfig({
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-     headless:  process.env.CI ? true : false,
+    headless: process.env.CI ? true : false,
     /* Base URL to use in actions like `await page.goto('/')`. */
     //baseURL: process.env.baseURL,
 
@@ -60,7 +60,6 @@ export default defineConfig({
        },
     },
 
-    
     {
       name: 'SmartBear Login Tests',
       testDir: './tests/login-tests',
@@ -68,7 +67,7 @@ export default defineConfig({
         ...devices['Desktop Chrome'],
         baseURL: process.env.loginURL
        },
-    },
+    }
 
     // {
     //   name: 'SmartBear Tests - Firefox',

@@ -1,15 +1,18 @@
-import { Page, expect } from "@playwright/test"
+import { Locator, Page } from "@playwright/test";
 
 export class BasePage {
+  readonly page: Page;
+  readonly loginInfo: Locator;
+  
+  constructor(page: Page) {
+    this.page = page;
 
-    readonly page: Page;
-    constructor(page) {
-        this.page = page;
+    // Common locators
+    this.loginInfo = this.page.locator('.login_info');
+  }
 
-        // Common locators
-    }
-
-    // reusable methods/comands
-
-
+  // reusable methods/commands
+  async wait(ms: number) {
+    await this.page.waitForTimeout(ms);
+  }
 }
