@@ -1,5 +1,4 @@
 import { test, expect } from './../../fixtures/PageObject';
-import { LoginPage } from '../../pages/LoginPage';
 import { ScreenshoyUtils } from '../../utils/ScreenshoyUtils';
 
 test.describe('SmartBear App Login Page visual verifitication', () => {
