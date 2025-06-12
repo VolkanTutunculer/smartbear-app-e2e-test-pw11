@@ -8,3 +8,4 @@ node_modules/
 .env
 auth/
 junitReports/
+tests/e2e-tests/home-visual.spec.ts-snapshots/SmartBear-App-Home-Page-visual-verification-Home-Smoke-Home-Page-Visual-Regression-1-SmartBear-E2E-Tests---Chrome-darwin.png
