@@ -8,4 +8,5 @@ node_modules/
 .env
 auth/
 junitReports/
+tests/login-tests/login-visual.spec.ts-snapshots/SmartBear-App-Login-Page-visual-verifitication-Login-Page-Visual-Regression-1-SmartBear-Login-Tests-win32.png
 tests/e2e-tests/home-visual.spec.ts-snapshots/SmartBear-App-Home-Page-visual-verification-Home-Smoke-Home-Page-Visual-Regression-1-SmartBear-E2E-Tests---Chrome-darwin.png
